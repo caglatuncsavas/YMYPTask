@@ -11,4 +11,8 @@
     <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="8.0.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\YMYPTask.Domain\YMYPTask.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

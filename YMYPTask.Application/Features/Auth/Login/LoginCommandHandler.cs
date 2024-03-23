@@ -1,9 +1,10 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Identity;
+using YMYPTask.Domain.Entities;
 
 namespace YMYPTask.Application.Features.Auth.Login;
 internal sealed class LoginCommandHandler(
-    UserManager<Appuser> userManager) : IRequestHandler<LoginCommand, string>
+    UserManager<AppUser> userManager) : IRequestHandler<LoginCommand, string>
 {
     public async Task<string> Handle(LoginCommand request, CancellationToken cancellationToken)
     {
