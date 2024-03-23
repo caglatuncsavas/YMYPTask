@@ -1,9 +1,10 @@
 using Microsoft.AspNetCore.Identity;
-using System.Runtime.ExceptionServices;
 using YMYPTask.Application;
+using YMYPTask.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddApplication();
 
 builder.Services.AddControllers();
