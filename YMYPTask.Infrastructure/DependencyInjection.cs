@@ -13,11 +13,18 @@ public static class DependencyInjection
     {
         services.AddDbContext<ApplicationDbContext>(options =>
         {
-            options.UseInMemoryDatabase("MyDb");
+            options.UseInMemoryDatabase ("MyDb");
         });
 
-        services.AddIdentity<AppUser, IdentityRole<Guid>>()
-            .AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
+        services.AddIdentity<AppUser, IdentityRole<Guid>>(options =>
+        {
+            options.Password.RequiredLength = 1;
+            options.Password.RequireDigit = false;
+            options.Password.RequireNonAlphanumeric = false;
+            options.Password.RequireUppercase = false;
+            options.Password.RequireLowercase = false;
+        })
+     .AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
 
         return services;
     }
