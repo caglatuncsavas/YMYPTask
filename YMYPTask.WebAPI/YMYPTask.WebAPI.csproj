@@ -12,6 +12,11 @@
 
   <ItemGroup>
     <ProjectReference Include="..\YMYPTask.Application\YMYPTask.Application.csproj" />
+    <ProjectReference Include="..\YMYPTask.Infrastructure\YMYPTask.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
   </ItemGroup>
 
 </Project>
