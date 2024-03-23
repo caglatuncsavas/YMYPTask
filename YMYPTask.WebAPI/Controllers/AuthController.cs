@@ -13,6 +13,6 @@ public sealed class AuthController(
     public async Task< IActionResult> Login(LoginCommand request,CancellationToken cancellationToken)
     {
         var response= await mediator.Send(request,cancellationToken);
-        return Ok(new {Message=response});
+        return Ok(new {Message=response}); 
     }
 }

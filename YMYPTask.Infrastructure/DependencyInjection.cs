@@ -21,6 +21,6 @@ public static class DependencyInjection
             .AddEntityFrameworkStores<ApplicationDbContext>()
             .AddDefaultTokenProviders();
 
-        return services;
+        return services; 
     }
 }
